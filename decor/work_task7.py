@@ -37,15 +37,18 @@ def logging(func: Callable) -> Callable:
                     f'Функция: {func.__name__}, ошибка: {err}, время возникновения ошибки: {datetime.now()}\n')
 
     return wrapper
+
+
 @logging
-def sum_my(a,b):
+def sum_my(a, b):
     """
 
     :param a: число int
     :param b: число Int
     :return: сложение
     """
-    res = a+b
+    res = a + b
     return res
 
-print(sum_my("v",4))
+
+print(sum_my("v", 4))
